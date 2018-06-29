@@ -39,20 +39,22 @@
 <header class="grid-x grid-padding-x" role="banner">
     <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 
-        <div class="large-6 cell">
+        <div class="medium-3 cell">
           <a href="<?php echo url(''); ?>"><img class="logo" src="<?php echo img('r4a_logo_v2.png'); ?>" alt="Logo for Radiology for Anatomists"></a>
         </div>
     
-        <div class="large-6 grid-x grid-padding-x top">
+        <div class="medium-6 cell medium-offset-3 top">
+            <div class="grid-x">
             <?php 
                 $navArray = array();
                 $navArray[] = array('label' => 'About', 'uri' => url('about'), 'class' => 'about nav-item');
                 $navArray[] = array('label' => 'Body Regions', 'uri' => url('collections'), 'class' => 'collections nav-item');
             ?>
-            <?php echo nav($navArray)->addPageClassToLi()->setUlClass('vertical large-horizontal menu cell large-5')->setUlId('right-nav'); ?>
+            <?php echo nav($navArray)->addPageClassToLi()->setUlClass('vertical medium-horizontal menu cell medium-5')->setUlId('right-nav'); ?>
 
-            <div id="search-container" role="search" class="large-7 cell">
+            <div id="search-container" role="search" class="medium-7 cell">
             <?php echo search_form(array('show_advanced' => false,'submit_value' => 'Search')); ?>
+            </div>
             </div>
         </div>
 

@@ -28,12 +28,6 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
     </div>
     <?php endif; ?>
 
-    <?php if (metadata('item', 'has tags')): ?>
-    <div class="tags"><p><strong><?php echo __('Tags'); ?>:</strong>
-        <?php echo tag_string('items'); ?></p>
-    </div>
-    <?php endif; ?>
-
     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' => $item)); ?>
 
     </div><!-- end class="item-meta" -->
